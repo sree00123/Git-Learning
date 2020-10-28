@@ -175,6 +175,55 @@
       <column defaultValue="" key="false" length="255" name="message" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tBarChart" componentVersion="0.01" offsetLabelX="0" offsetLabelY="0" posX="128" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBarChart_2"/>
+    <elementParameter field="FILE" name="GENERATED_IMAGE_PATH" value="&quot;C:/Users/student/workspace/out.png&quot;"/>
+    <elementParameter field="TEXT" name="CHART_TITLE" value="&quot;Chart title&quot;"/>
+    <elementParameter field="CHECK" name="INCLUDE_LEGEND" value="true"/>
+    <elementParameter field="CHECK" name="3D_FORMAT" value="true"/>
+    <elementParameter field="TEXT" name="IMAGE_WIDTH" value="500"/>
+    <elementParameter field="TEXT" name="IMAGE_HEIGHT" value="500"/>
+    <elementParameter field="TEXT" name="CATEGORY_AXIS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="VALUE_AXIS" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FORE_GROUND_ALPHA" value="0.8"/>
+    <elementParameter field="CLOSED_LIST" name="PLOT_ORIENTATION" value="org.jfree.chart.plot.PlotOrientation.VERTICAL"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBarChart_2">
+      <column defaultValue="" key="false" length="255" name="series" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="category" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="value" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDynamoDBInput" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="256" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDynamoDBInput_1"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="dynamodb_id"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="CHECK" name="INHERIT_CREDENTIALS" value="false"/>
+    <elementParameter field="CHECK" name="ASSUME_ROLE" value="false"/>
+    <elementParameter field="TEXT" name="ARN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SESSION_DURATION" show="false" value="15"/>
+    <elementParameter field="CHECK" name="USE_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="QUERY"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="DynamoDB"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="KEY_CONDITION_EXPRESSION"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED_KEY_CONDITION_EXPRESSION" value="false"/>
+    <elementParameter field="TEXT" name="ADVANCED_KEY_CONDITION_EXPRESSION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_FILTER_EXPRESSION" value="false"/>
+    <elementParameter field="TABLE" name="FILTER_EXPRESSION" show="false"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED_FILTER_EXPRESSION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ADVANCED_FILTER_EXPRESSION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="VALUE_MAPPING" show="false"/>
+    <elementParameter field="TABLE" name="NAME_MAPPING"/>
+    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="STS_ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDynamoDBInput_1"/>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tBarChart_1" offsetLabelX="0" offsetLabelY="0" source="tBarChart_1" target="tHDFSCompare_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -184,13 +233,23 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_38ac5d50-49e1-4793-8722-881de0305060"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jyaL7ioukqlXvRz5x8XUjKzU8BtDtnU5BhHAbVI5xyfXrBOYH0D7GKn+r6S9sG1rEp4DDADYIDAr
-wNeo40Z6aw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_74801a90-33fa-4409-9d7d-34cc644efffc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ri8slhM33YOt6M8Pxsf1wIpqJGxMS5mkbuw9thiX3lwpzsmVegb4WZQzc5Os1iOSth39/obP2ZCn
-/4SRpuVdzQ==</DigestValue></Reference></SignedInfo><SignatureValue>A1MNlq3OZVjgnPvUwDgLOJg57YdlgAHNLctMOuS3eSF26vDwo7SjjsEathwvoiwMqZKWyUOngr82
-fORHrtY8Fsy9HUrgRYIpG2xCqVTNgHvph9tFsCSQolQG0CkmMORO8I5bhkE1Og96ZRwfQqwuC5LY
-46sHXe4i5Q/np5LPRGCseQyMcNhnQiF3Kv4XIQHB8ZIrLaPI6WculUOUlJUNIa+XQKgi8dQEqO9J
-5cu7Ms2pGck9Jaso7OvFIt+bU7XWgMyBFFFCvhM+0SqdyaVemwIIpUZuUUpgsPRo8GCUYG81p8ZF
-MI5cji0TaEDn9PL7Yk+bXgoNGrfWVRCPQUfoTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBarChart_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDynamoDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_281bf5ed-f981-41fb-8769-35f73f4efa84"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>EawBYXWfx6uJGH8IqhzaMR4GNfB9oMXJF7NhDgqDZPhVcQuSkWyyIKN8DHs1MJOgUe1KIdKmtgDn
+5EXBGMWy7w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b70d69b1-5e3d-4094-b964-db321b0255cd"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>eOrn7VdoNcglv08Km8k0I7XpNQXmyfxQi3ldtRGCrVwIVcmIrqdFVKSppBPRvCpQzTQaLMNO4u7S
+/Thd+fWF9w==</DigestValue></Reference></SignedInfo><SignatureValue>i2dahm/CFks3w1cirHe1I3tGJvy/yHjsk6mQw9GjmveN7YjKOWlebkleoWOz9e3Ge1w70MKXS7SO
+WCN6gpd626N7ASgecfxtWD2RO2unrZyZlAe36e6kiBXSHY92G7u+ohdrdEgubo0SnG6Qzq8LChSA
+Ql6o3qu8yILzO+Nyy6gz1iv4qhg3T74k7GwCmQHjNFJZUyXOxcMAqbqpjQFS0qyf6Nwgi3YSHECP
+VGxNmeKGQp9vN9pX2ogleHrq7Vo0eGUI31TRb2FlOUL/WVc/a6b/AQyEr7OjGxtUuzUHQDJo8ylS
+/L5dnrx1PCIA7CoU3OD61ElaG8zhPymp0IUbHw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -214,4 +273,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_74801a90-33fa-4409-9d7d-34cc644efffc" Target="#_38ac5d50-49e1-4793-8722-881de0305060"><Timestamp>2020-10-28 03:32:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b70d69b1-5e3d-4094-b964-db321b0255cd" Target="#_281bf5ed-f981-41fb-8769-35f73f4efa84"><Timestamp>2020-10-28 03:43:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
