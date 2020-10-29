@@ -421,4 +421,5 @@
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_ZRkS8hmMEeuXc5NsfR4zAA" login="admin@company.com" firstName="Admin" lastName="Admin" type="MDM" additionnalData="{}"/>
   <TalendProperties:User xmi:id="_Z9YQEBmMEeuXc5NsfR4zAA" login="gituser@company.com" firstName="git" lastName="user" type="MDM" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_qkv1gBmNEeuXc5NsfR4zAA" login="dev1@company.com" firstName="dev1" lastName="dev1" type="MDM" additionnalData="{}"/>
 </xmi:XMI>
